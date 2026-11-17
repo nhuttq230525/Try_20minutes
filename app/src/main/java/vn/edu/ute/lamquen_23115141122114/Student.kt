@@ -1,0 +1,19 @@
+package vn.edu.ute.lamquen_23115141122114
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "students_table")
+data class Student(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0, // Khóa chính tự động tăng trong SQLite
+    @ColumnInfo(name = "full_name")
+    val fullName: String,
+    @ColumnInfo(name = "student_code")
+    val studentCode: String,
+    @ColumnInfo(name = "email")
+    val email: String,
+    @ColumnInfo(name = "gpa")
+    val gpa: Double
+)
